@@ -2292,23 +2292,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\juans\\.nuget\\packages\\": {},
+    "C:\\Users\\jesus\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
+      "projectUniqueName": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
       "projectName": "Infrastructure.DrivenAdapter",
-      "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
-      "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\obj\\",
+      "projectPath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
+      "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
