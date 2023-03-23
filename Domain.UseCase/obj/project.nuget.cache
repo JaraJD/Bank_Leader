@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "y8Jbj0brZF4HFyHJXGIRVdiniokz7RrkL33NQbgSs3LwKLdNN1uNdDeMvtOTxHZpLu0eXtKgfd0LqAfLJpo6SQ==",
+  "dgSpecHash": "MN+aLkOvi2Eq+f2nT/tsmNzNxQCbg7fETo6kvQ5VBthEOtidheD5h2VPXzS9MlphtanG9WS6UmZp9FckGjA2mQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\juans\\.nuget\\packages\\ardalis.guardclauses\\4.0.1\\ardalis.guardclauses.4.0.1.nupkg.sha512",
+    "C:\\Users\\juans\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512"
+  ],
   "logs": []
 }
