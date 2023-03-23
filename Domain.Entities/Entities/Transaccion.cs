@@ -23,15 +23,9 @@ namespace Domain.Entities.Entities
         public int Id_Producto { get; set; }
         
         [Required]
-        public int Id_Cliente { get; set; }
-        
-        [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Fecha { get; set; }
-        
-        [Required]
-        public string Hora { get; set; }
         
         [Required]
         public string Tipo_Transaccion { get; set; }
@@ -41,11 +35,5 @@ namespace Domain.Entities.Entities
         
         [Required]
         public decimal Monto { get; set; }
-        
-        [Required]
-        public decimal Saldo_Final { get; set; }
-        
-        [Required]
-        public decimal Saldo_Anterior { get; set;}
     }
 }

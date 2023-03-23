@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Entities;
+﻿using Domain.Entities.Commands;
+using Domain.Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Domain.UseCase.Gateway.Repository
 {
     public interface ICuentaRepositorio
     {
-        Task<Cuenta> InsertarCuentaAsync(Cuenta cuenta);
+        Task<InsertarNuevaCuenta> InsertarCuentaAsync(InsertarNuevaCuenta cuenta);
         Task<List<Cuenta>> TraerTodasLasCuentas();
     }
 }

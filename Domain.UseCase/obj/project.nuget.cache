@@ -8,6 +8,9 @@
     "C:\\Users\\jesus\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512"
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Dev
   "logs": [
     {
       "code": "Undefined",
@@ -16,7 +19,10 @@
       "message": "Problem reading the cache file C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
+<<<<<<< HEAD
 =======
   "logs": []
+>>>>>>> Dev
+=======
 >>>>>>> Dev
 }

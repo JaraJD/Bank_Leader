@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Entities;
+﻿using Domain.Entities.Commands;
+using Domain.Entities.Entities;
 using Domain.UseCase.Gateway;
 using Domain.UseCase.Gateway.Repository;
 using System;
@@ -18,7 +19,7 @@ namespace Domain.UseCase.UseCase
             this.cuentaRepositorio = cuentaRepositorio;
         }
 
-        public async Task<Cuenta> AgregarCuenta(Cuenta cuenta)
+        public async Task<InsertarNuevaCuenta> AgregarCuenta(InsertarNuevaCuenta cuenta)
         {
             return await cuentaRepositorio.InsertarCuentaAsync(cuenta);
         }

@@ -1,9 +1,13 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "AFJ/mioaGoms4oepb6mY0S/ccvhqVwwgY0KjyN/XNlVuasDEymwc/0DiheGvio30my1vtyVTj0GXilt7gmGyPg==",
 =======
   "dgSpecHash": "K40emvJrGfd6E5rM/6gNAGECuoQFSu/2TTacRHCLCuTeiqa+T0mkHrUPATdGCZUPtRj7tLpBWJyIv/zz9B899A==",
+>>>>>>> Dev
+=======
+  "dgSpecHash": "AFJ/mioaGoms4oepb6mY0S/ccvhqVwwgY0KjyN/XNlVuasDEymwc/0DiheGvio30my1vtyVTj0GXilt7gmGyPg==",
 >>>>>>> Dev
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",

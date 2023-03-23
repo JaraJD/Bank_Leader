@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Entities;
+﻿using Domain.Entities.Commands;
+using Domain.Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace Domain.UseCase.Gateway
     public interface IClienteCasoDeUso
     {
         Task<List<Cliente>> ObtenerClientes();
-        Task<Cliente> AgregarCliente(Cliente cliente);
+        Task<InsertarNuevoCliente> AgregarCliente(InsertarNuevoCliente cliente);
     }
 }

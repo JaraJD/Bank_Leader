@@ -169,6 +169,9 @@
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Dev
   },
   "logs": [
     {
@@ -178,7 +181,10 @@
       "message": "Problem reading the cache file C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
+<<<<<<< HEAD
 =======
   }
+>>>>>>> Dev
+=======
 >>>>>>> Dev
 }
