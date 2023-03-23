@@ -24,7 +24,7 @@ namespace Infrastructure.DrivenAdapter.Repository
         public async Task<InsertarNuevaCuenta> InsertarCuentaAsync(InsertarNuevaCuenta cuenta)
         {
             Guard.Against.Null(cuenta, nameof(cuenta));
-            Guard.Against.NullOrEmpty(cuenta.Id_Cliente.ToString(), nameof(cuenta.Id_Cliente));
+            Guard.Against.NullOrEmpty(cuenta.Cliente_Id.ToString(), nameof(cuenta.Cliente_Id));
             Guard.Against.NullOrEmpty(cuenta.Tipo_Cuenta, nameof(cuenta.Tipo_Cuenta));
             Guard.Against.NullOrEmpty(cuenta.Saldo.ToString(), nameof(cuenta.Saldo));
             Guard.Against.NullOrEmpty(cuenta.Fecha_Apertura.ToString(), nameof(cuenta.Fecha_Apertura));
@@ -35,7 +35,7 @@ namespace Infrastructure.DrivenAdapter.Repository
             var connection = await _dbConnectionBuilder.CreateConnectionAsync();
             var insertarNuevaCuenta = new
             {
-                Id_Cliente = cuenta.Id_Cliente,
+                Cliente_Id = cuenta.Cliente_Id,
                 Tipo_Cuenta = cuenta.Tipo_Cuenta,
                 Saldo = cuenta.Saldo,
                 Fecha_Apertura = cuenta.Fecha_Apertura,
@@ -44,7 +44,7 @@ namespace Infrastructure.DrivenAdapter.Repository
                 Estado = cuenta.Estado
             };
 
-            string query = $"INSERT INTO {nombreTabla} (Id_Cliente, Tipo_Cuenta, Saldo, Fecha_Apertura, Fecha_Cierre, Tasa_Interes, Estado) VALUES (@Id_Cliente, @Tipo_Cuenta, @Saldo, @Fecha_Apertura, @Fecha_Cierre, @Tasa_Interes, @Estado)";
+            string query = $"INSERT INTO {nombreTabla} (Cliente_Id, Tipo_Cuenta, Saldo, Fecha_Apertura, Fecha_Cierre, Tasa_Interes, Estado) VALUES (@Cliente_Id, @Tipo_Cuenta, @Saldo, @Fecha_Apertura, @Fecha_Cierre, @Tasa_Interes, @Estado)";
             var resultado = await connection.ExecuteAsync(query, insertarNuevaCuenta);
 
             connection.Close();

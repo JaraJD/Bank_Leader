@@ -27,7 +27,7 @@ namespace Infrastructure.DrivenAdapter.Repository
         public async Task<InsertarNuevoProducto> InsertarProductoAsync(InsertarNuevoProducto producto)
         {
             Guard.Against.Null(producto, nameof(producto));
-            Guard.Against.NullOrEmpty(producto.Id_Cliente.ToString(), nameof(producto.Id_Cliente));
+            Guard.Against.NullOrEmpty(producto.Cliente_Id.ToString(), nameof(producto.Cliente_Id));
             Guard.Against.NullOrEmpty(producto.Tipo_Producto, nameof(producto.Tipo_Producto));
             Guard.Against.NullOrEmpty(producto.Descripcion, nameof(producto.Descripcion));
             Guard.Against.NullOrEmpty(producto.Plazo.ToString(), nameof(producto.Plazo));
@@ -39,7 +39,7 @@ namespace Infrastructure.DrivenAdapter.Repository
             var connection = await _dbConnectionBuilder.CreateConnectionAsync();
             var insertarProducto = new
             {
-                Id_Cliente = producto.Id_Cliente,
+                Cliente_Id = producto.Cliente_Id,
                 Tipo_Producto = producto.Tipo_Producto,
                 Descripcion = producto.Descripcion,
                 Plazo = producto.Plazo,
@@ -48,7 +48,7 @@ namespace Infrastructure.DrivenAdapter.Repository
                 Estado = producto.Estado
             };
 
-            string query = $"INSERT INTO {nombreTabla}  (Id_Cliente, Tipo_Producto, Descripcion, Plazo, Monto, Tasa_Interes, Estado) VALUES (@Id_Cliente, @Tipo_Producto, @Descripcion, @Plazo, @Monto, @Tasa_Interes, @Estado)";
+            string query = $"INSERT INTO {nombreTabla}  (Cliente_Id, Tipo_Producto, Descripcion, Plazo, Monto, Tasa_Interes, Estado) VALUES (@Cliente_Id, @Tipo_Producto, @Descripcion, @Plazo, @Monto, @Tasa_Interes, @Estado)";
             var resultado = await connection.ExecuteAsync(query, insertarProducto);
 
             return producto;
