@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "TUAOKpfXEe4runl1kXW3lirBeoiXUg0d/xYtSTX59rSACyieKAVKJSZwVK3jkUtwIQkt/ND2PK+a9efYM4gLuw==",
+  "dgSpecHash": "JH0dPrKRiHeOzVQFvNFiAG2gvL4/y1zTlO4WYgvmyHLx9dLkbThooGDtaiteceZxfxjqXS7BNM1PvjP8EaBbAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jesus\\.nuget\\packages\\ardalis.guardclauses\\4.0.1\\ardalis.guardclauses.4.0.1.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\automapper.data\\7.0.2\\automapper.data.7.0.2.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
@@ -19,5 +21,12 @@
     "C:\\Users\\jesus\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

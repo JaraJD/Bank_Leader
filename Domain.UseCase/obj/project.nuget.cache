@@ -1,11 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "TdO84O8Jg1pB1tYjSoH5LkNVjzHG9iiwgqBEVgg7FGwoKEl8+QMrR47C/Wfn8HrjutMv6mnrlWs1LU6U4/Z13A==",
+  "dgSpecHash": "lVxCn0ISto19yu64wPxBycIF7xAEReIGo6iNl7YxHNcx0EZ6D6ytFiS1zy4lhk5ks+vkwiNvATqU5D27hbGa7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jesus\\.nuget\\packages\\ardalis.guardclauses\\4.0.1\\ardalis.guardclauses.4.0.1.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
