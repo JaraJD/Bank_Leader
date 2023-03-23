@@ -11,16 +11,16 @@ namespace Domain.Entities.Entities
     public class Transaccion
     {
         [Required]
-        public int Id { get; set; }
+        public int Transaccion_Id { get; set; }
         
         [Required]
-        public int Id_Cuenta { get; set; }
+        public int Cuenta_Id { get; set; }
         
         [Required]
-        public int Id_Tarjeta { get; set; }
+        public int Tarjeta_Id { get; set; }
         
         [Required]
-        public int Id_Producto { get; set; }
+        public int Producto_Id { get; set; }
         
         [Required]
         [DataType(DataType.Date)]

@@ -1,11 +1,20 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "6YxemTTSOsMi1HTyJM5yBFY0ZkI2E3Ymn9hcfAA0uisbYeNICTbsDXC+5eK1UyyCvgelgmnxkGVk5Q/QMNNNOQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jesus\\.nuget\\packages\\ardalis.guardclauses\\4.0.1\\ardalis.guardclauses.4.0.1.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512"
+=======
+  "dgSpecHash": "RD12+M4qV7inxsS/fdY+8wcjnl7MkxinNyNOIZsXYYgrV5Ms4Qtp9q93FZ52k3n6vty03GmGxHr/9t0RnPdjUg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\57318\\.nuget\\packages\\ardalis.guardclauses\\4.0.1\\ardalis.guardclauses.4.0.1.nupkg.sha512",
+    "C:\\Users\\57318\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512"
+>>>>>>> aa75b25515648084acbedcc77bc4fa284cb40cd0
   ],
   "logs": [
     {
