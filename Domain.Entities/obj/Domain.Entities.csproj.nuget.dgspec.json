@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {}
+    "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+    "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
         "projectName": "Domain.Entities",
-        "projectPath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
+        "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.Entities\\obj\\",
         "projectStyle": "PackageReference",

@@ -108,9 +108,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
+      "projectUniqueName": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
       "projectName": "Domain.UseCase",
-      "projectPath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
+      "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
       "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCase\\obj\\",
       "projectStyle": "PackageReference",
@@ -134,8 +134,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
-              "projectPath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+            "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+              "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
             }
           }
         }

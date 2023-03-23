@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj": {}
+    "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj": {
+    "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj",
         "projectName": "Domain.UseCasesTest",
-        "projectPath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj",
+        "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCasesTest\\obj\\",
+        "outputPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCasesTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

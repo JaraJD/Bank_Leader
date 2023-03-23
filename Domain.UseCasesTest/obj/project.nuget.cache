@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b8cSzr7L1bv21nvOhEsSCk6b31yrTMLfMOgz7ZdGllWqtcSccGDq5rFeymbRckP2eP+4zGSu5h+9Tv64DS15DQ==",
+  "dgSpecHash": "oNft7udazrpf+mJwMpWh3Z94HS3Gze4KgHK6M9Kfl2k/gCzvz1xQBkxTKDfve95pbwYxceBbPb0wmg0w2i1mWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj",
+  "projectFilePath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCasesTest\\Domain.UseCasesTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jesus\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5drF5KQXgEomH4VfW2DnGfNj7QsnK+10BLbThsikMbo2gAttgf5Ei9hKEHJUkpQ//G84eJQMs3DrfLajgG1mQA==",
+  "dgSpecHash": "TUAOKpfXEe4runl1kXW3lirBeoiXUg0d/xYtSTX59rSACyieKAVKJSZwVK3jkUtwIQkt/ND2PK+a9efYM4gLuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
+  "projectFilePath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jesus\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\automapper.data\\7.0.2\\automapper.data.7.0.2.nupkg.sha512",
