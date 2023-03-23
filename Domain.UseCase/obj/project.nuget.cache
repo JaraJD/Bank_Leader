@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y8Jbj0brZF4HFyHJXGIRVdiniokz7RrkL33NQbgSs3LwKLdNN1uNdDeMvtOTxHZpLu0eXtKgfd0LqAfLJpo6SQ==",
+  "dgSpecHash": "2G/Cno3P9KSMlDydMZ21o7NF1llcxZr4WRw1O0Zc5fNDMF2t0QZ/CVppd1tRFQKDwNbpVL6Dn9nuQPrXTvhuEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
+  "projectFilePath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
