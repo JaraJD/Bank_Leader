@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Entities;
+﻿using Domain.Entities.Commands;
+using Domain.Entities.Entities;
 using Domain.UseCase.Gateway;
 using Domain.UseCase.Gateway.Repository;
 using System;
@@ -11,14 +12,14 @@ namespace Domain.UseCase.UseCase
 {
     public class ClienteCasoDeUso : IClienteCasoDeUso
     {
-        private readonly IClienteRespositorio clienteRespositorio;
+        private readonly IClienteRepositorio clienteRespositorio;
 
-        public ClienteCasoDeUso(IClienteRespositorio clienteRespositorio)
+        public ClienteCasoDeUso(IClienteRepositorio clienteRespositorio)
         {
             this.clienteRespositorio = clienteRespositorio;
         }
 
-        public async Task<Cliente> AgregarCliente(Cliente cliente)
+        public async Task<InsertarNuevoCliente> AgregarCliente(InsertarNuevoCliente cliente)
         {
             return await clienteRespositorio.InsertarClienteAsync(cliente);
         }
