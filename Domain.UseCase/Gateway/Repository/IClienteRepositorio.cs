@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Entities;
+﻿using Domain.Entities.Commands;
+using Domain.Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Domain.UseCase.Gateway.Repository
 {
-    public interface IClienteRespositorio
+    public interface IClienteRepositorio
     {
-        Task<Cliente> InsertarClienteAsync(Cliente cliente);
+        Task<InsertarNuevoCliente> InsertarClienteAsync(InsertarNuevoCliente cliente);
         Task<List<Cliente>> TraerTodosLosClientes();
     }
 }

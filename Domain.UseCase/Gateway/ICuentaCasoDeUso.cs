@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Entities;
+﻿using Domain.Entities.Commands;
+using Domain.Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,6 @@ namespace Domain.UseCase.Gateway
     {
         Task<List<Cuenta>> ObtenerCuentas();
 
-        Task<Cuenta> AgregarCuenta(Cuenta cuenta);
+        Task<InsertarNuevaCuenta> AgregarCuenta(InsertarNuevaCuenta cuenta);
     }
 }

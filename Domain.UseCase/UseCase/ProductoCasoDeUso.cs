@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Entities;
+﻿using Domain.Entities.Commands;
+using Domain.Entities.Entities;
 using Domain.UseCase.Gateway;
 using Domain.UseCase.Gateway.Repository;
 using System;
@@ -18,7 +19,7 @@ namespace Domain.UseCase.UseCase
             this.productoRepositorio = productoRepositorio;
         }
 
-        public async Task<Producto> AgregarProducto(Producto producto)
+        public async Task<InsertarNuevoProducto> AgregarProducto(InsertarNuevoProducto producto)
         {
             return await productoRepositorio.InsertarProductoAsync(producto);
         }

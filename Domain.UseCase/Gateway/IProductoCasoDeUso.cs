@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Entities;
+﻿using Domain.Entities.Commands;
+using Domain.Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Domain.UseCase.Gateway
 {
-    internal interface IProductoCasoDeUso
+    public interface IProductoCasoDeUso
     {
         Task<List<Producto>> ObtenerProductos();
-        Task<Producto> AgregarProducto(Producto producto);
+        Task<InsertarNuevoProducto> AgregarProducto(InsertarNuevoProducto producto);
     }
 }
