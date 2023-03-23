@@ -28,8 +28,21 @@ namespace Bank.AppService.Middlewares
 
 				switch (ex)
 				{
-					
+					case Microsoft.Data.SqlClient.SqlException:
+						if (ex.Message.Contains("FOREIGN"))
+						{
+							responseModel.Message = "La llave foranea ingresada no existe en la base de datos";
+							response.StatusCode = (int)HttpStatusCode.NotFound;
+						}
+						break;
+
+
+					default:
+						response.StatusCode = (int)HttpStatusCode.InternalServerError;
+						break;
 				}
+				var result = JsonSerializer.Serialize(responseModel);
+				await response.WriteAsync(result);
 			}
 		}
 	}

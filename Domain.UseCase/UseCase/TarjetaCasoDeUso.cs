@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Entities;
+﻿using Domain.Entities.Commands;
+using Domain.Entities.Entities;
 using Domain.UseCase.Gateway;
 using Domain.UseCase.Gateway.Repository;
 using System;
@@ -18,7 +19,7 @@ namespace Domain.UseCase.UseCase
             this.tarjetaRepositorio = tarjetaRepositorio;
         }
 
-        public async Task<Tarjeta> AgregarTarjeta(Tarjeta tarjeta)
+        public async Task<InsertarNuevaTarjeta> AgregarTarjeta(InsertarNuevaTarjeta tarjeta)
         {
             return await tarjetaRepositorio.InsertarTarjetaAsync(tarjeta);
         }
