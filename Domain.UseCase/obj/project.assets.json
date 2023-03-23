@@ -168,6 +168,7 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
+<<<<<<< HEAD
   },
   "logs": [
     {
@@ -177,4 +178,7 @@
       "message": "Problem reading the cache file C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
+=======
+  }
+>>>>>>> Dev
 }

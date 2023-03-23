@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "JH0dPrKRiHeOzVQFvNFiAG2gvL4/y1zTlO4WYgvmyHLx9dLkbThooGDtaiteceZxfxjqXS7BNM1PvjP8EaBbAA==",
+=======
+  "dgSpecHash": "TUAOKpfXEe4runl1kXW3lirBeoiXUg0d/xYtSTX59rSACyieKAVKJSZwVK3jkUtwIQkt/ND2PK+a9efYM4gLuw==",
+>>>>>>> Dev
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
   "expectedPackageFiles": [
