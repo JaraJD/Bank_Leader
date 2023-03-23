@@ -27,9 +27,9 @@ namespace Bank.AppService.Controllers
 		}
 
 		[HttpPost]
-		public async Task<Cuenta> Registrar_Director([FromBody] InsertarNuevaCuenta command)
+		public async Task<InsertarNuevaCuenta> Registrar_Director(InsertarNuevaCuenta command)
 		{
-			return await _cuentaCasoDeUso.AgregarCuenta(_mapper.Map<Cuenta>(command));
+			return await _cuentaCasoDeUso.AgregarCuenta(command);
 		}
 	}
 }

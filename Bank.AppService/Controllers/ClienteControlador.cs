@@ -27,9 +27,9 @@ namespace Bank.AppService.Controllers
 		}
 
 		[HttpPost]
-		public async Task<Cliente> Registrar_Director([FromBody] InsertarNuevoCliente command)
+		public async Task<InsertarNuevoCliente> Registrar_Director(InsertarNuevoCliente command)
 		{
-			return await _clienteCasoDeUso.AgregarCliente(_mapper.Map<Cliente>(command));
+			return await _clienteCasoDeUso.AgregarCliente(command);
 		}
 	}
 }

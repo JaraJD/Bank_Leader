@@ -11,25 +11,25 @@ namespace Bank.AppService.Controllers
 	[ApiController]
 	public class TarjetaControlador
 	{
-		private readonly ITarjetaCasoDeUso _tarjetaCaspDeUso;
+		private readonly ITarjetaCasoDeUso _tarjetaCasoDeUso;
 		private readonly IMapper _mapper;
 
 		public TarjetaControlador(ITarjetaCasoDeUso tarjetaCaspDeUso, IMapper mapper)
 		{
-			_tarjetaCaspDeUso = tarjetaCaspDeUso;
+			_tarjetaCasoDeUso = tarjetaCaspDeUso;
 			_mapper = mapper;
 		}
 
 		[HttpGet]
 		public async Task<List<Tarjeta>> Obtener_Listado_Directores()
 		{
-			return await _tarjetaCaspDeUso.ObtenerTarjetas();
+			return await _tarjetaCasoDeUso.ObtenerTarjetas();
 		}
 
 		[HttpPost]
-		public async Task<Tarjeta> Registrar_Director([FromBody] InsertarNuevaTarjeta command)
+		public async Task<InsertarNuevaTarjeta> Registrar_Director(InsertarNuevaTarjeta command)
 		{
-			return await _tarjetaCaspDeUso.AgregarTarjeta(_mapper.Map<Tarjeta>(command));
+			return await _tarjetaCasoDeUso.AgregarTarjeta(command);
 		}
 	}
 }
