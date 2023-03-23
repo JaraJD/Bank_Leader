@@ -1,4 +1,6 @@
 ﻿using Bank.AppService.Wrappers;
+using System.Net;
+using System.Text.Json;
 
 namespace Bank.AppService.Middlewares
 {
@@ -28,4 +30,7 @@ namespace Bank.AppService.Middlewares
 				{
 					
 				}
+			}
+		}
+	}
 }
