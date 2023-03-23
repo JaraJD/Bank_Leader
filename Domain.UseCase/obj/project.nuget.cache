@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2G/Cno3P9KSMlDydMZ21o7NF1llcxZr4WRw1O0Zc5fNDMF2t0QZ/CVppd1tRFQKDwNbpVL6Dn9nuQPrXTvhuEQ==",
+  "dgSpecHash": "ca5FGChjhRd5lngIPhAE6STYz/kKuF+7na9CL0mJJFCKztSLbGRYXzduBaKzzATVWp8udjAj0yd7CVhHliNTaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\Source\\Repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jesus\\.nuget\\packages\\ardalis.guardclauses\\4.0.1\\ardalis.guardclauses.4.0.1.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512"
+  ],
   "logs": []
 }
