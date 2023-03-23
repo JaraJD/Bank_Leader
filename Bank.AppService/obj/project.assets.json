@@ -2596,23 +2596,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\jesus\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\57318\\.nuget\\packages\\": {},
+>>>>>>> aa75b25515648084acbedcc77bc4fa284cb40cd0
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
       "projectName": "Bank.AppService",
       "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
       "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
+      "projectName": "Bank.AppService",
+      "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
+      "packagesPath": "C:\\Users\\57318\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Bank.AppService\\obj\\",
+>>>>>>> aa75b25515648084acbedcc77bc4fa284cb40cd0
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\57318\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> aa75b25515648084acbedcc77bc4fa284cb40cd0
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2628,6 +2644,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
               "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
             },
@@ -2636,6 +2653,16 @@
             },
             "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj": {
               "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj"
+=======
+            "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+              "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+            },
+            "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
+              "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
+            },
+            "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj": {
+              "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj"
+>>>>>>> aa75b25515648084acbedcc77bc4fa284cb40cd0
             }
           }
         }
@@ -2686,7 +2713,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   },

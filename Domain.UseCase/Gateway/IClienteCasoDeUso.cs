@@ -12,5 +12,9 @@ namespace Domain.UseCase.Gateway
     {
         Task<List<Cliente>> ObtenerClientes();
         Task<InsertarNuevoCliente> AgregarCliente(InsertarNuevoCliente cliente);
-    }
+        Task<Cliente> ObtenerClientePorId(int id);
+        Task <List<ClienteConCuenta>> ObtenerClienteTransacciones();
+        Task <List<ClienteConTarjeta>> ObtenerClienteTarjeta();
+        Task <List<ClienteConProducto>> ObtenerClienteProducto();
+	}
 }
