@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.UseCase.Gateway.Repository
 {
-    public interface IClienteRespositorio
+    public interface IClienteRepositorio
     {
         Task<Cliente> InsertarClienteAsync(Cliente cliente);
         Task<List<Cliente>> TraerTodosLosClientes();
