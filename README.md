@@ -19,7 +19,7 @@ USE Bank_Leader;
 GO
 
 CREATE TABLE Cliente (
-  cliente_id INT PRIMARY KEY ,
+  cliente_id INT PRIMARY KEY IDENTITY(1,1),
   nombre VARCHAR(50),
   apellido VARCHAR(50),
   fecha_nacimiento DATE,
@@ -30,7 +30,7 @@ CREATE TABLE Cliente (
 GO
 
 CREATE TABLE Cuenta (
-  cuenta_id INT PRIMARY KEY ,
+  cuenta_id INT PRIMARY KEY IDENTITY(1,1),
   cliente_id INT,
   tipo_cuenta VARCHAR(50),
   saldo DECIMAL(12,2),
@@ -43,7 +43,7 @@ CREATE TABLE Cuenta (
 GO
 
 CREATE TABLE Tarjeta (
-  tarjeta_id INT PRIMARY KEY ,
+  tarjeta_id INT PRIMARY KEY IDENTITY(1,1),
   cliente_id INT,
   tipo_tarjeta VARCHAR(50),
   fecha_emision DATE,
@@ -55,7 +55,7 @@ CREATE TABLE Tarjeta (
 GO
 
 CREATE TABLE Producto (
-  producto_id INT PRIMARY KEY ,
+  producto_id INT PRIMARY KEY IDENTITY(1,1),
   cliente_id INT,
   tipo_producto VARCHAR(50),
   descripcion VARCHAR(100),
@@ -68,7 +68,7 @@ CREATE TABLE Producto (
 GO
 
 CREATE TABLE Transaccion (
-  transaccion_id INT PRIMARY KEY ,
+  transaccion_id INT PRIMARY KEY IDENTITY(1,1),
   cuenta_id INT,
   tarjeta_id INT,
   producto_id INT,
