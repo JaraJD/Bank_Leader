@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj": {}
+    "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj": {
+    "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
+        "projectUniqueName": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
         "projectName": "Bank.AppService",
-        "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
-        "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\obj\\",
+        "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
+        "packagesPath": "C:\\Users\\57318\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Bank.AppService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\57318\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
-                "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+              "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+                "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
               },
-              "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
-                "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
+              "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
+                "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
               }
             }
           }
@@ -88,24 +88,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+    "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
         "projectName": "Domain.Entities",
-        "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
-        "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\obj\\",
+        "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
+        "packagesPath": "C:\\Users\\57318\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\57318\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -154,24 +154,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
+    "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
+        "projectUniqueName": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
         "projectName": "Domain.UseCase",
-        "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
-        "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\obj\\",
+        "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
+        "packagesPath": "C:\\Users\\57318\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.UseCase\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\57318\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -187,8 +187,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
-                "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+              "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+                "projectPath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
               }
             }
           }
@@ -218,7 +218,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
