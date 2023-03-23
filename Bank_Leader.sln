@@ -15,15 +15,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{92B168D2-9D31-4B6F-80AB-9739A18C4415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.AppService", "Bank.AppService\Bank.AppService.csproj", "{CBD3A1EB-B848-40A5-9237-B16C7EF8F15E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bank.AppService", "Bank.AppService\Bank.AppService.csproj", "{CBD3A1EB-B848-40A5-9237-B16C7EF8F15E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{49FCD937-1E86-48D6-8F20-FAC8F0A73C14} = {49FCD937-1E86-48D6-8F20-FAC8F0A73C14}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Entities", "Domain.Entities\Domain.Entities.csproj", "{0862E854-431A-4062-A4CC-6C919CCBC217}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Entities", "Domain.Entities\Domain.Entities.csproj", "{0862E854-431A-4062-A4CC-6C919CCBC217}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.UseCase", "Domain.UseCase\Domain.UseCase.csproj", "{413895AA-FDAB-4A5E-A31A-F3C844ACA7D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.UseCase", "Domain.UseCase\Domain.UseCase.csproj", "{413895AA-FDAB-4A5E-A31A-F3C844ACA7D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.DrivenAdapter", "Infrastructure.DrivenAdapter\Infrastructure.DrivenAdapter.csproj", "{49FCD937-1E86-48D6-8F20-FAC8F0A73C14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.DrivenAdapter", "Infrastructure.DrivenAdapter\Infrastructure.DrivenAdapter.csproj", "{49FCD937-1E86-48D6-8F20-FAC8F0A73C14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.UseCasesTest", "Domain.UseCasesTest\Domain.UseCasesTest.csproj", "{0E3C73D8-09AB-45FA-BCFC-D3A355E63E88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.UseCasesTest", "Domain.UseCasesTest\Domain.UseCasesTest.csproj", "{0E3C73D8-09AB-45FA-BCFC-D3A355E63E88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
