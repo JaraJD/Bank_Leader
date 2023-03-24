@@ -345,6 +345,32 @@ namespace Domain.UseCasesTest.UnitTests
 
             }
 
+            [Fact]
+            public async Task ObtenerClienteID()
+            {
+                // Arrange
+                var cliente = new Cliente
+                {
+                    Cliente_Id = 1,
+                    Nombre = "Caffir",
+                    Apellido = "Torres",
+                    Fecha_Nacimiento = DateTime.Now,
+                    Telefono = "3024339697",
+                    Correo = "Ejemplo@gmail.com",
+                    Genero = "M"
+                };
+      
+
+                _mockRepositorio.Setup(x => x.ObtenerClientePorIdAsync(1)).ReturnsAsync(cliente);
+
+                //act
+                var result = await _mockRepositorio.Object.ObtenerClientePorIdAsync(1);
+
+                //assert
+                Assert.Equal(cliente, result);
+
+            }
+
 
         }
     }
