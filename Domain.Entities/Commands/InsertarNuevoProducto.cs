@@ -8,7 +8,8 @@ namespace Domain.Entities.Commands
 {
     public class InsertarNuevoProducto
     {
-        public string Tipo_Producto { get; set; }
+		public int Cliente_Id { get; set; }
+		public string Tipo_Producto { get; set; }
         public string Descripcion { get; set; }
         public int Plazo { get; set; }
         public decimal Monto { get; set; }

@@ -9,12 +9,10 @@ namespace Domain.Entities.Commands
     public class InsertarNuevoCliente
     {
         public string Nombre { get; set; }
-        public string Apellidos { get; set; }
+        public string Apellido { get; set; }
         public DateTime Fecha_Nacimiento { get; set; }
-        public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
-        public string Ocupacion { get; set; }
         public string Genero { get; set; }
     }
 }
