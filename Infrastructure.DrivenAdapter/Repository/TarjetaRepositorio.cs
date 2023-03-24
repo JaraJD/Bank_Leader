@@ -43,8 +43,25 @@ namespace Infrastructure.DrivenAdapter.Repository
                 Estado = tarjeta.Estado
             };
 
-            string query = $"INSERT INTO {nombreTabla}  (Cliente_Id, Tipo_Tarjeta, Fecha_Emision, Fecha_Vencimiento, Limite_Credito, Estado) VALUES (@Cliente_Id, @Tipo_Tarjeta, @Fecha_Emision, @Fecha_Vencimiento, @Limite_Credito, @Estado)";
-            var resultado = await connection.ExecuteAsync(query, insertarNuevaTarjeta);
+            string query = $"INSERT INTO {nombreTabla}  (Cliente_Id, Tipo_Tarjeta, Fecha_Emision, Fecha_Vencimiento, Limite_Credito, Estado) VALUES (@Cliente_Id, @Tipo_Tarjeta, @Fecha_Emision, @Fecha_Vencimiento, @Limite_Credito, @Estado); SELECT SCOPE_IDENTITY();";
+            int tarjetaId = await connection.ExecuteScalarAsync<int>(query, insertarNuevaTarjeta);
+
+            var nuevaTransaccion = new
+            {
+                cuenta_id = (int?)null,
+                tarjeta_id = tarjetaId,
+                producto_id = (int?)null,
+                fecha = DateTime.Today,
+                tipo_transaccion = "Creacion de tarjeta",
+                descripcion = "Se crea la tarjeta para el usuario con el cliente_id " + tarjeta.Cliente_Id + ".   ",
+                monto = 0
+            };
+
+            // Insertar la nueva transacción.
+            string insertTransaccionQuery = $"INSERT INTO Transaccion (cuenta_id, tarjeta_id, producto_id, fecha, tipo_transaccion, descripcion, monto) VALUES (@cuenta_id, @tarjeta_id, @producto_id, @fecha, @tipo_transaccion, @descripcion, @monto)";
+            int resultadoTransaccion = await connection.ExecuteAsync(insertTransaccionQuery, nuevaTransaccion);
+
+            connection.Close();
 
             return tarjeta;
         }
