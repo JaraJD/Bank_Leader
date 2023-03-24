@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.DrivenAdapter.Repository
 {
-	public class TransaccionesRepositorio : ITransaccionesRepositorio
-	{
-		public Task<List<Transaccion>> TraerTodasLasTransacciones()
-		{
-			throw new NotImplementedException();
-		}
-	}
+    public class TransaccionesRepositorio : ITransaccionesRepositorio
+    {
+        public Task<List<Transaccion>> TraerTodasLasTransacciones()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

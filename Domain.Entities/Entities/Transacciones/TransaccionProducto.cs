@@ -10,6 +10,8 @@ namespace Domain.Entities.Entities.Transacciones
 	public class TransaccionProducto
 	{
 		[Required]
+		public int Transaccion_Id { get; set; }
+		[Required]
 		public int Producto_Id { get; set; }
 
 		[Required]
