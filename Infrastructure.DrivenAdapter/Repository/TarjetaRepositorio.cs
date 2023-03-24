@@ -24,7 +24,7 @@ namespace Infrastructure.DrivenAdapter.Repository
         public async Task<InsertarNuevaTarjeta> InsertarTarjetaAsync(InsertarNuevaTarjeta tarjeta)
         {
             Guard.Against.Null(tarjeta, nameof(tarjeta));
-            Guard.Against.NullOrEmpty(tarjeta.Id_Cliente.ToString(), nameof(tarjeta.Id_Cliente));
+            Guard.Against.NullOrEmpty(tarjeta.Cliente_Id.ToString(), nameof(tarjeta.Cliente_Id));
             Guard.Against.NullOrEmpty(tarjeta.Tipo_Tarjeta, nameof(tarjeta.Tipo_Tarjeta));
             Guard.Against.NullOrEmpty(tarjeta.Fecha_Emision.ToString(), nameof(tarjeta.Fecha_Emision));
             Guard.Against.NullOrEmpty(tarjeta.Fecha_Vencimiento.ToString(), nameof(tarjeta.Fecha_Vencimiento));
@@ -35,7 +35,7 @@ namespace Infrastructure.DrivenAdapter.Repository
             var connection = await _dbConnectionBuilder.CreateConnectionAsync();
             var insertarNuevaTarjeta = new
             {
-                Id_Cliente = tarjeta.Id_Cliente,
+                Cliente_Id = tarjeta.Cliente_Id,
                 Tipo_Tarjeta = tarjeta.Tipo_Tarjeta,
                 Fecha_Emision = tarjeta.Fecha_Emision,
                 Fecha_Vencimiento = tarjeta.Fecha_Vencimiento,
@@ -43,8 +43,25 @@ namespace Infrastructure.DrivenAdapter.Repository
                 Estado = tarjeta.Estado
             };
 
-            string query = $"INSERT INTO {nombreTabla}  (Id_Cliente, Tipo_Tarjeta, Fecha_Emision, Fecha_Vencimiento, Limite_Credito, Estado) VALUES (@Id_Cliente, @Tipo_Tarjeta, @Fecha_Emision, @Fecha_Vencimiento, @Limite_Credito, @Estado)";
-            var resultado = await connection.ExecuteAsync(query, insertarNuevaTarjeta);
+            string query = $"INSERT INTO {nombreTabla}  (Cliente_Id, Tipo_Tarjeta, Fecha_Emision, Fecha_Vencimiento, Limite_Credito, Estado) VALUES (@Cliente_Id, @Tipo_Tarjeta, @Fecha_Emision, @Fecha_Vencimiento, @Limite_Credito, @Estado); SELECT SCOPE_IDENTITY();";
+            int tarjetaId = await connection.ExecuteScalarAsync<int>(query, insertarNuevaTarjeta);
+
+            var nuevaTransaccion = new
+            {
+                cuenta_id = (int?)null,
+                tarjeta_id = tarjetaId,
+                producto_id = (int?)null,
+                fecha = DateTime.Today,
+                tipo_transaccion = "Creacion de tarjeta",
+                descripcion = "Se crea la tarjeta para el usuario con el cliente_id " + tarjeta.Cliente_Id + ".   ",
+                monto = 0
+            };
+
+            // Insertar la nueva transacción.
+            string insertTransaccionQuery = $"INSERT INTO Transaccion (cuenta_id, tarjeta_id, producto_id, fecha, tipo_transaccion, descripcion, monto) VALUES (@cuenta_id, @tarjeta_id, @producto_id, @fecha, @tipo_transaccion, @descripcion, @monto)";
+            int resultadoTransaccion = await connection.ExecuteAsync(insertTransaccionQuery, nuevaTransaccion);
+
+            connection.Close();
 
             return tarjeta;
         }
