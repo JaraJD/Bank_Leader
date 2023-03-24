@@ -48,8 +48,25 @@ namespace Infrastructure.DrivenAdapter.Repository
                 Estado = producto.Estado
             };
 
-            string query = $"INSERT INTO {nombreTabla}  (Cliente_Id, Tipo_Producto, Descripcion, Plazo, Monto, Tasa_Interes, Estado) VALUES (@Cliente_Id, @Tipo_Producto, @Descripcion, @Plazo, @Monto, @Tasa_Interes, @Estado)";
-            var resultado = await connection.ExecuteAsync(query, insertarProducto);
+            string insertProductoQuery = $"INSERT INTO {nombreTabla}  (Cliente_Id, Tipo_Producto, Descripcion, Plazo, Monto, Tasa_Interes, Estado) VALUES (@Cliente_Id, @Tipo_Producto, @Descripcion, @Plazo, @Monto, @Tasa_Interes, @Estado); SELECT SCOPE_IDENTITY();";
+            int productoId = await connection.ExecuteScalarAsync<int>(insertProductoQuery, insertarProducto);
+
+            //Crear objeto con la informacion de la nueva transaccion
+            var nuevaTransaccion = new
+            {
+                cuenta_id = (int?)null,
+                tarjeta_id = (int?)null,
+                producto_id = productoId,
+                fecha = DateTime.Today,
+                tipo_transaccion = "Creacion de producto",
+                descripcion = "Se crea el producto para el usuario con el cliente_id " + producto.Cliente_Id + ".   ",
+                monto = producto.Monto
+            };
+            // Insertar la nueva transacción.
+            string insertTransaccionQuery = $"INSERT INTO Transaccion (cuenta_id, tarjeta_id, producto_id, fecha, tipo_transaccion, descripcion, monto) VALUES (@cuenta_id, @tarjeta_id, @producto_id, @fecha, @tipo_transaccion, @descripcion, @monto)";
+            int resultadoTransaccion = await connection.ExecuteAsync(insertTransaccionQuery, nuevaTransaccion);
+
+            connection.Close();
 
             return producto;
 
