@@ -24,7 +24,7 @@ namespace Infrastructure.DrivenAdapter.Repository
         public async Task<InsertarNuevaCuenta> InsertarCuentaAsync(InsertarNuevaCuenta cuenta)
         {
             Guard.Against.Null(cuenta, nameof(cuenta));
-            Guard.Against.NullOrEmpty(cuenta.Id_Cliente.ToString(), nameof(cuenta.Id_Cliente));
+            Guard.Against.NullOrEmpty(cuenta.Cliente_Id.ToString(), nameof(cuenta.Cliente_Id));
             Guard.Against.NullOrEmpty(cuenta.Tipo_Cuenta, nameof(cuenta.Tipo_Cuenta));
             Guard.Against.NullOrEmpty(cuenta.Saldo.ToString(), nameof(cuenta.Saldo));
             Guard.Against.NullOrEmpty(cuenta.Fecha_Apertura.ToString(), nameof(cuenta.Fecha_Apertura));
@@ -35,7 +35,7 @@ namespace Infrastructure.DrivenAdapter.Repository
             var connection = await _dbConnectionBuilder.CreateConnectionAsync();
             var insertarNuevaCuenta = new
             {
-                Id_Cliente = cuenta.Id_Cliente,
+                Cliente_Id = cuenta.Cliente_Id,
                 Tipo_Cuenta = cuenta.Tipo_Cuenta,
                 Saldo = cuenta.Saldo,
                 Fecha_Apertura = cuenta.Fecha_Apertura,
@@ -44,10 +44,28 @@ namespace Infrastructure.DrivenAdapter.Repository
                 Estado = cuenta.Estado
             };
 
-            string query = $"INSERT INTO {nombreTabla} (Id_Cliente, Tipo_Cuenta, Saldo, Fecha_Apertura, Fecha_Cierre, Tasa_Interes, Estado) VALUES (@Id_Cliente, @Tipo_Cuenta, @Saldo, @Fecha_Apertura, @Fecha_Cierre, @Tasa_Interes, @Estado)";
-            var resultado = await connection.ExecuteAsync(query, insertarNuevaCuenta);
+            // Insertar la nueva cuenta y obtener su cuenta_id.
+            string insertCuentaQuery = $"INSERT INTO {nombreTabla} (Cliente_Id, Tipo_Cuenta, Saldo, Fecha_Apertura, Fecha_Cierre, Tasa_Interes, Estado) VALUES (@Cliente_Id, @Tipo_Cuenta, @Saldo, @Fecha_Apertura, @Fecha_Cierre, @Tasa_Interes, @Estado); SELECT SCOPE_IDENTITY();";
+            int cuentaId = await connection.ExecuteScalarAsync<int>(insertCuentaQuery, insertarNuevaCuenta);
+
+            // Crear un objeto con la información de la nueva transacción.
+            var nuevaTransaccion = new
+            {
+                cuenta_id = cuentaId,
+                tarjeta_id = (int?)null,
+                producto_id = (int?)null,
+                fecha = DateTime.Today,
+                tipo_transaccion = "Creacion de cuenta",
+                descripcion = "Se crea la cuenta del usuario con el cliente_id " + cuenta.Cliente_Id + ".   ",  // El espacio al final es para que el campo tenga el mismo tamaño que los otros campos de la tabla.
+                monto = cuenta.Saldo
+            };
+
+            // Insertar la nueva transacción.
+            string insertTransaccionQuery = $"INSERT INTO Transaccion (cuenta_id, tarjeta_id, producto_id, fecha, tipo_transaccion, descripcion, monto) VALUES (@cuenta_id, @tarjeta_id, @producto_id, @fecha, @tipo_transaccion, @descripcion, @monto)";
+            int resultadoTransaccion = await connection.ExecuteAsync(insertTransaccionQuery, nuevaTransaccion);
 
             connection.Close();
+
             return cuenta;
         }
 
