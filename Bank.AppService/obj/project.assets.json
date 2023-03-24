@@ -2596,23 +2596,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\juans\\.nuget\\packages\\": {},
+    "C:\\Users\\jesus\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
+      "projectUniqueName": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
       "projectName": "Bank.AppService",
-      "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
-      "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\obj\\",
+      "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
+      "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2628,14 +2628,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
-              "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+            "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+              "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
             },
-            "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
-              "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
+            "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
+              "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
             },
-            "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj": {
-              "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj"
+            "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj": {
+              "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj"
             }
           }
         }
@@ -2689,13 +2689,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
