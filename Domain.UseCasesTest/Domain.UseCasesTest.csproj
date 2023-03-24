@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
     <PackageReference Include="Moq" Version="4.18.4" />
     <PackageReference Include="xunit" Version="2.4.2" />
@@ -25,6 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj" />
     <ProjectReference Include="..\Domain.UseCase\Domain.UseCase.csproj" />
+    <ProjectReference Include="..\Infrastructure.DrivenAdapter\Infrastructure.DrivenAdapter.csproj" />
   </ItemGroup>
 
 </Project>
