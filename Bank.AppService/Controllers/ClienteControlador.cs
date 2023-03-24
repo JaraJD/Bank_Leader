@@ -57,7 +57,11 @@ namespace Bank.AppService.Controllers
             return await _clienteCasoDeUso.ObtenerClientePorId(id);
         }
 
-        
+		[HttpGet("/ActivosCliente")]
+		public async Task<ClienteConActivos> Obtener_Cliente_Activos(int id)
+		{
+			return await _clienteCasoDeUso.ObtenerClienteActivos(id);
+		}
 
-    }
+	}
 }
