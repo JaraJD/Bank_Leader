@@ -76,7 +76,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 			var connection = await _dbConnectionBuilder.CreateConnectionAsync();
 
 			var sql = $"SELECT * FROM {nombreTabla} C " +
-					  $"INNER JOIN Producto P ON C.cliente_id = P.cliente_id " +
+					  $"INNER JOIN Producto P ON P.cliente_id = C.cliente_id " +
 					  $"INNER JOIN Transaccion T ON P.producto_id = T.producto_id";
 			var cliente = await connection.QueryAsync<ClienteConProducto, ProductoConTransaccion, Transaccion, ClienteConProducto>(sql,
 			(cliente, producto, transaccion) => {
@@ -92,7 +92,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 				cliente.Productos.Add(producto);
 				return cliente;
 			},
-			splitOn: "id");
+			splitOn: "producto_id");
 
 			connection.Close();
 			return (List<ClienteConProducto>)cliente;
@@ -119,7 +119,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 				cliente.Tarjetas.Add(tarjeta);
 				return cliente;
 			},
-			splitOn: "id");
+			splitOn: "tarjeta_id");
 
 			connection.Close();
 			return (List<ClienteConTarjeta>)cliente;
@@ -146,7 +146,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 				cliente.Cuentas.Add(cuenta);
 				return cliente;
 			},
-			splitOn: "id");
+			splitOn: "cuenta_id");
 
 			connection.Close();
 			return (List<ClienteConCuenta>)cliente;

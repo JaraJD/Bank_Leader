@@ -1,20 +1,18 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "6YxemTTSOsMi1HTyJM5yBFY0ZkI2E3Ymn9hcfAA0uisbYeNICTbsDXC+5eK1UyyCvgelgmnxkGVk5Q/QMNNNOQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\jesus\\.nuget\\packages\\ardalis.guardclauses\\4.0.1\\ardalis.guardclauses.4.0.1.nupkg.sha512",
-    "C:\\Users\\jesus\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512"
-=======
   "dgSpecHash": "Fae7LEPBRzKAnqxKTlWa2r7l0HvZL+4PW29QRRtruoWMYG0R3exEh6mwxI4vGx/Koe0bMYC/N6zd6roJfIPuZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juans\\.nuget\\packages\\ardalis.guardclauses\\4.0.1\\ardalis.guardclauses.4.0.1.nupkg.sha512",
     "C:\\Users\\juans\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512"
->>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

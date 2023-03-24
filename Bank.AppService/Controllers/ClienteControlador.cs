@@ -33,19 +33,19 @@ namespace Bank.AppService.Controllers
             return await _clienteCasoDeUso.ObtenerClientes();
         }
 
-        [HttpGet]
+        [HttpGet("/TransaccionesCuenta")]
         public async Task<List<ClienteConCuenta>> Transacciones_De_La_Cuenta()
         {
             return await _clienteCasoDeUso.ObtenerClienteTransacciones();
         }
 
-        [HttpGet]
+        [HttpGet("/TransaccionesTarjeta")]
         public async Task<List<ClienteConTarjeta>> Transacciones_De_La_Tarjeta()
         {
             return await _clienteCasoDeUso.ObtenerClienteTarjeta();
         }
 
-        [HttpGet]
+        [HttpGet("/TransaccionesProducto")]
         public async Task<List<ClienteConProducto>> Transacciones_Del_Producto()
         {
             return await _clienteCasoDeUso.ObtenerClienteProducto();
