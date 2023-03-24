@@ -27,6 +27,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.DrivenAdapter", "Infrastructure.DrivenAdapter\Infrastructure.DrivenAdapter.csproj", "{49FCD937-1E86-48D6-8F20-FAC8F0A73C14}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.UseCasesTest", "Domain.UseCasesTest\Domain.UseCasesTest.csproj", "{0E3C73D8-09AB-45FA-BCFC-D3A355E63E88}"
+	ProjectSection(ProjectDependencies) = postProject
+		{49FCD937-1E86-48D6-8F20-FAC8F0A73C14} = {49FCD937-1E86-48D6-8F20-FAC8F0A73C14}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
