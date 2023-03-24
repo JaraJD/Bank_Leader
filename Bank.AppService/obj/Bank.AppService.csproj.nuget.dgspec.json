@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Bank.AppService\\obj\\",
+=======
+    "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
+        "projectName": "Bank.AppService",
+        "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
+        "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Bank.AppService\\obj\\",
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,6 +51,7 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
                 "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
               },
@@ -41,6 +60,16 @@
               },
               "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj": {
                 "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj"
+=======
+              "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+                "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+              },
+              "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
+                "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
+              },
+              "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj": {
+                "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj"
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
               }
             }
           }
@@ -95,6 +124,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -103,12 +133,26 @@
         "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\obj\\",
+=======
+    "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
+        "projectName": "Domain.Entities",
+        "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj",
+        "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\obj\\",
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -161,6 +205,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -169,12 +214,26 @@
         "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\obj\\",
+=======
+    "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
+        "projectName": "Domain.UseCase",
+        "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj",
+        "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\obj\\",
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -190,8 +249,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
                 "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+=======
+              "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+                "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
               }
             }
           }
@@ -225,6 +289,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -233,12 +298,26 @@
         "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\obj\\",
+=======
+    "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
+        "projectName": "Infrastructure.DrivenAdapter",
+        "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
+        "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\obj\\",
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -254,11 +333,19 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
                 "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
               },
               "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
                 "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
+=======
+              "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+                "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+              },
+              "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
+                "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
+>>>>>>> 4de32f6bf59932b8ba6cdfe45cd6abfb745cf044
               }
             }
           }

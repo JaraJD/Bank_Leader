@@ -48,7 +48,27 @@ namespace Infrastructure.DrivenAdapter.Repository
             return cliente;
         }
 
-        public async Task<List<Cliente>> TraerTodosLosClientes()
+		public Task<Cliente> ObtenerClientePorIdAsync(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<List<ClienteConProducto>> ObtenerClienteProductoAsync()
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<List<ClienteConTarjeta>> ObtenerClienteTarjetaAsync()
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<List<ClienteConCuenta>> ObtenerClienteTransaccionesAsync()
+		{
+			throw new NotImplementedException();
+		}
+
+		public async Task<List<Cliente>> TraerTodosLosClientes()
         {
             var connection = await _dbConnectionBuilder.CreateConnectionAsync();
             Guard.Against.Null(connection, nameof(connection));
@@ -60,5 +80,10 @@ namespace Infrastructure.DrivenAdapter.Repository
             connection.Close();
             return resultado.ToList();
         }
-    }
+
+		public Task<List<Cliente>> TraerTodosLosClientesAsync()
+		{
+			throw new NotImplementedException();
+		}
+	}
 }
