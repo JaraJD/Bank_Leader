@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Domain.UseCase
-build_property.ProjectDir = C:\Users\57318\Desktop\Liga Sofka\DDD-BD-Dapper-PruebasUnitarias\Semana8\Bank_Leader\Domain.UseCase\
+build_property.ProjectDir = C:\Users\jesus\source\repos\Bank_Leader\Domain.UseCase\

@@ -8,6 +8,7 @@ using Ardalis.GuardClauses;
 using Dapper;
 using Domain.Entities.Commands;
 using Domain.Entities.Entities;
+using Domain.Entities.Entities.Transacciones;
 using Domain.UseCase.Gateway.Repository;
 using Infrastructure.DrivenAdapter.Gateway;
 
@@ -82,7 +83,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 					INNER JOIN Transaccion T ON T.producto_id = A.producto_id";
 
             var clientesDic = new Dictionary<int, ClienteConProducto>();
-            var clientes = await connection.QueryAsync<ClienteConProducto, ProductoConTransaccion, Transaccion, ClienteConProducto>(sql,
+            var clientes = await connection.QueryAsync<ClienteConProducto, ProductoConTransaccion, TransaccionProducto, ClienteConProducto>(sql,
                 (cliente, producto, transaccion) =>
                 {
                     if (!clientesDic.TryGetValue(cliente.Cliente_Id, out ClienteConProducto clienteEntry))
@@ -94,7 +95,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 
                     if (clienteEntry.Productos != null && !clienteEntry.Productos.Any(c => c.Producto_Id == producto.Producto_Id))
                     {
-                        producto.Transacciones = new List<Transaccion>();
+                        producto.Transacciones = new List<TransaccionProducto>();
                         producto.Transacciones.Add(transaccion);
                         clienteEntry.Productos.Add(producto);
                     }
@@ -126,7 +127,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 					INNER JOIN Transaccion T ON T.tarjeta_id = A.tarjeta_id";
 
             var clientesDic = new Dictionary<int, ClienteConTarjeta>();
-            var clientes = await connection.QueryAsync<ClienteConTarjeta, TarjetaConTransaccion, Transaccion, ClienteConTarjeta>(sql,
+            var clientes = await connection.QueryAsync<ClienteConTarjeta, TarjetaConTransaccion, TransaccionTarjeta, ClienteConTarjeta>(sql,
                 (cliente, tarjeta, transaccion) =>
                 {
                     if (!clientesDic.TryGetValue(cliente.Cliente_Id, out ClienteConTarjeta clienteEntry))
@@ -138,7 +139,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 
                     if (clienteEntry.Tarjetas != null && !clienteEntry.Tarjetas.Any(c => c.Tarjeta_Id == tarjeta.Tarjeta_Id))
                     {
-                        tarjeta.Transacciones = new List<Transaccion>();
+                        tarjeta.Transacciones = new List<TransaccionTarjeta>();
                         tarjeta.Transacciones.Add(transaccion);
                         clienteEntry.Tarjetas.Add(tarjeta);
                     }
@@ -170,7 +171,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 					INNER JOIN Transaccion T ON T.cuenta_id = A.cuenta_id";
 
             var clientesDic = new Dictionary<int, ClienteConCuenta>();
-            var clientes = await connection.QueryAsync<ClienteConCuenta, CuentaConTransaccion, Transaccion, ClienteConCuenta>(sql,
+            var clientes = await connection.QueryAsync<ClienteConCuenta, CuentaConTransaccion, TransaccionCuenta, ClienteConCuenta>(sql,
                 (cliente, cuenta, transaccion) =>
                 {
                     if (!clientesDic.TryGetValue(cliente.Cliente_Id, out ClienteConCuenta clienteEntry))
@@ -182,7 +183,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 
                     if (clienteEntry.Cuentas != null && !clienteEntry.Cuentas.Any(c => c.Cuenta_Id == cuenta.Cuenta_Id))
                     {
-                        cuenta.Transacciones = new List<Transaccion>();
+                        cuenta.Transacciones = new List<TransaccionCuenta>();
                         cuenta.Transacciones.Add(transaccion);
                         clienteEntry.Cuentas.Add(cuenta);
                     }
