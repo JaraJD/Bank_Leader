@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Entities.Entities.Transacciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,6 @@ namespace Domain.Entities.Entities
 		public DateTime Fecha_Vencimiento { get; set; }
 		public decimal Limite_Credito { get; set; }
 		public string Estado { get; set; }
-		public List<Transaccion> Transacciones { get; set;}
+		public List<TransaccionTarjeta> Transacciones { get; set;}
 	}
 }
