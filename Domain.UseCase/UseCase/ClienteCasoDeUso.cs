@@ -24,6 +24,11 @@ namespace Domain.UseCase.UseCase
             return await clienteRespositorio.InsertarClienteAsync(cliente);
         }
 
+		public async Task<ClienteConActivos> ObtenerClienteActivos(int id)
+		{
+			return await clienteRespositorio.ObtenerClienteActivosAsync(id);
+		}
+
 		public async Task<Cliente> ObtenerClientePorId(int id)
 		{
 			return await clienteRespositorio.ObtenerClientePorIdAsync(id);

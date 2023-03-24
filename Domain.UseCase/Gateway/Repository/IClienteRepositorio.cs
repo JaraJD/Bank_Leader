@@ -16,5 +16,6 @@ namespace Domain.UseCase.Gateway.Repository
 		Task<List<ClienteConCuenta>> ObtenerClienteTransaccionesAsync();
 		Task<List<ClienteConTarjeta>> ObtenerClienteTarjetaAsync();
 		Task<List<ClienteConProducto>> ObtenerClienteProductoAsync();
+		Task<ClienteConActivos> ObtenerClienteActivosAsync(int id);
 	}
 }
