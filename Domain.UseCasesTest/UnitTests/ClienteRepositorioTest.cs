@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Domain.Entities.Commands;
 using Domain.Entities.Entities;
 using Domain.Entities.Entities.Transacciones;
 using Domain.UseCase.Gateway.Repository;
@@ -24,6 +25,146 @@ namespace Domain.UseCasesTest.UnitTests
             {
                 _mockRepositorio = new();
             }
+
+
+
+            [Fact]
+            public async Task Insertar_Cliente()
+            {
+                //Arrange
+
+                var insertarCliente = new InsertarNuevoCliente
+                {
+                    Nombre = "Juan",
+                    Apellido = "Jaramillo",
+                    Fecha_Nacimiento = DateTime.Now,
+                    Telefono = "555-4859",
+                    Correo = "juan.jaramillo@mail.com",
+                    Genero = "M"
+                };
+
+                var cliente = new InsertarNuevoCliente
+                {
+                    Nombre = "Juan",
+                    Apellido = "Jaramillo",
+                    Fecha_Nacimiento = DateTime.Now,
+                    Telefono = "555-4859",
+                    Correo = "juan.jaramillo@mail.com",
+                    Genero = "M"
+                };
+
+                _mockRepositorio.Setup(repo => repo.InsertarClienteAsync(insertarCliente))
+                    .ReturnsAsync(cliente);
+
+                //Act
+
+                var res = await _mockRepositorio.Object.InsertarClienteAsync(insertarCliente);
+
+                //Assert
+                Assert.Equal(cliente, res);
+            }
+
+            [Fact]
+            public async Task Get_Cliente_con_Activos()
+            {
+                //arrange
+                var test = new ClienteConActivos
+                {
+                    Cliente_Id = 1,
+                    Nombre = "Juan",
+                    Apellido = "Jaramillo",
+                    Fecha_Nacimiento = DateTime.Now,
+                    Telefono = "555-6857",
+                    Correo = "juan.jara@correo.com",
+                    Genero = "M",
+                    Cuentas = new List<Cuenta>
+                {
+                    new Cuenta
+                    {
+                      Cuenta_Id = 1,
+                      Cliente_Id = 1,
+                      Tipo_Cuenta = "Ahorros",
+                      Saldo = 200000,
+                      Fecha_Apertura = DateTime.Now,
+                      Fecha_Cierre = DateTime.Now,
+                      Tasa_Interes = 0,
+                      Estado = "Activa"
+                    },
+                    new Cuenta
+                    {
+                      Cuenta_Id = 2,
+                      Cliente_Id = 1,
+                      Tipo_Cuenta = "Corriente",
+                      Saldo = 5586888,
+                      Fecha_Apertura = DateTime.Now,
+                      Fecha_Cierre = DateTime.Now,
+                      Tasa_Interes = 2,
+                      Estado = "Activa"
+                    }
+
+                },
+
+                    Productos = new List<Producto>
+                {
+                    new Producto
+                    {
+                        Producto_Id = 1,
+                        Cliente_Id = 1,
+                        Tipo_Producto = "Credito",
+                        Descripcion = "Libre destino",
+                        Plazo = 36,
+                        Monto = 5000000,
+                        Tasa_Interes = 2,
+                        Estado = "Activa"
+                    },
+                    new Producto
+                    {
+                        Producto_Id = 2,
+                        Cliente_Id = 1,
+                        Tipo_Producto = "Credito",
+                        Descripcion = "Hipotecario",
+                        Plazo = 120,
+                        Monto = 36000000,
+                        Tasa_Interes = 3,
+                        Estado = "Activa"
+                    }
+
+                },
+                    Tarjetas = new List<Tarjeta>
+                {
+                      new Tarjeta
+                      {
+                        Tarjeta_Id = 1,
+                        Cliente_Id = 1,
+                        Tipo_Tarjeta = "Ahorros",
+                        Fecha_Emision = DateTime.Now,
+                        Fecha_Vencimiento = DateTime.Now,
+                        Limite_Credito = 5000000,
+                        Estado = "Activo"
+                      },
+                      new Tarjeta
+                      {
+                        Tarjeta_Id = 2,
+                        Cliente_Id = 1,
+                        Tipo_Tarjeta = "Credito",
+                        Fecha_Emision = DateTime.Now,
+                        Fecha_Vencimiento = DateTime.Now,
+                        Limite_Credito = 4800000,
+                        Estado = "Activo"
+                      }
+
+
+                }
+                };
+                _mockRepositorio.Setup(x => x.ObtenerClienteActivosAsync(1)).ReturnsAsync(test);
+                //act
+                var result = await _mockRepositorio.Object.ObtenerClienteActivosAsync(1);
+                //assert
+                Assert.Equal(test, result);
+            }
+
+
+
 
             [Fact]
             public async Task ObtenerClientes()
