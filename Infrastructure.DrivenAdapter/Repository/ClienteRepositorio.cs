@@ -127,29 +127,46 @@ namespace Infrastructure.DrivenAdapter.Repository
 
 		public async Task<List<ClienteConCuenta>> ObtenerClienteTransaccionesAsync()
 		{
-			var connection = await _dbConnectionBuilder.CreateConnectionAsync();
+            var connection = await _dbConnectionBuilder.CreateConnectionAsync();
 
-			var sql = $"SELECT * FROM {nombreTabla} C " +
-					  $"INNER JOIN Cuenta A ON C.cliente_id = A.cliente_id " +
-					  $"INNER JOIN Transaccion T ON A.cuenta_id = T.cuenta_id";
-			var cliente = await connection.QueryAsync<ClienteConCuenta, CuentaConTransaccion, Transaccion, ClienteConCuenta>(sql,
-			(cliente, cuenta, transaccion) => {
-				if (cliente.Cuentas == null)
-				{
-					if (cuenta.Transacciones == null)
-					{
-						cuenta.Transacciones = new List<Transaccion>();
-					}
-					cliente.Cuentas = new List<CuentaConTransaccion>();
-				}
-				cuenta.Transacciones.Add(transaccion);
-				cliente.Cuentas.Add(cuenta);
-				return cliente;
-			},
-			splitOn: "cuenta_id");
+            var sql = @"
+        SELECT DISTINCT C.*, A.*, T.*
+        FROM Cliente C
+        INNER JOIN Cuenta A ON A.cliente_id = C.cliente_id
+        INNER JOIN Transaccion T ON T.cuenta_id = A.cuenta_id";
 
-			connection.Close();
-			return (List<ClienteConCuenta>)cliente;
-		}
+            var clientesDic = new Dictionary<int, ClienteConCuenta>();
+            var clientes = await connection.QueryAsync<ClienteConCuenta, CuentaConTransaccion, Transaccion, ClienteConCuenta>(sql,
+                (cliente, cuenta, transaccion) =>
+                {
+                    if (!clientesDic.TryGetValue(cliente.Cliente_Id, out ClienteConCuenta clienteEntry))
+                    {
+                        clienteEntry = cliente;
+                        clienteEntry.Cuentas = new List<CuentaConTransaccion>();
+                        clientesDic.Add(clienteEntry.Cliente_Id, clienteEntry);
+                    }
+
+                    if (clienteEntry.Cuentas != null && !clienteEntry.Cuentas.Any(c => c.Cuenta_Id == cuenta.Cuenta_Id))
+                    {
+                        cuenta.Transacciones = new List<Transaccion>();
+                        cuenta.Transacciones.Add(transaccion);
+                        clienteEntry.Cuentas.Add(cuenta);
+                    }
+                    else
+                    {
+                        var cuentaEntry = clienteEntry.Cuentas.FirstOrDefault(c => c.Cuenta_Id == cuenta.Cuenta_Id);
+                        if (cuentaEntry.Transacciones != null && !cuentaEntry.Transacciones.Any(t => t.Transaccion_Id == transaccion.Transaccion_Id))
+                        {
+                            cuentaEntry.Transacciones.Add(transaccion);
+                        }
+                    }
+
+                    return clienteEntry;
+                },
+                splitOn: "cuenta_Id, transaccion_Id");
+
+            connection.Close();
+            return clientesDic.Values.ToList();
+        }
 	}
 }
