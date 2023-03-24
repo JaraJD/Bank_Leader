@@ -73,29 +73,6 @@ namespace Infrastructure.DrivenAdapter.Repository
 
 		public async Task<List<ClienteConProducto>> ObtenerClienteProductoAsync()
 		{
-            /*var connection = await _dbConnectionBuilder.CreateConnectionAsync();
-
-			var sql = $"SELECT * FROM {nombreTabla} C " +
-					  $"INNER JOIN Producto P ON P.cliente_id = C.cliente_id " +
-					  $"INNER JOIN Transaccion T ON P.producto_id = T.producto_id";
-			var cliente = await connection.QueryAsync<ClienteConProducto, ProductoConTransaccion, Transaccion, ClienteConProducto>(sql,
-			(cliente, producto, transaccion) => {
-				if (cliente.Productos == null)
-				{
-					if (producto.Transacciones == null)
-					{
-						producto.Transacciones = new List<Transaccion>();
-					}
-					cliente.Productos = new List<ProductoConTransaccion>();
-				}
-				producto.Transacciones.Add(transaccion);
-				cliente.Productos.Add(producto);
-				return cliente;
-			},
-			splitOn: "producto_id");
-
-			connection.Close();
-			return (List<ClienteConProducto>)cliente;*/
             var connection = await _dbConnectionBuilder.CreateConnectionAsync();
 
             var sql =
