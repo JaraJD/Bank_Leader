@@ -15,5 +15,6 @@ namespace Domain.Entities.Entities
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public string Genero { get; set; }
-    }
+		
+	}
 }

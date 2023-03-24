@@ -203,5 +203,39 @@ namespace Infrastructure.DrivenAdapter.Repository
             connection.Close();
             return clientesDic.Values.ToList();
         }
+
+		public async Task<ClienteConActivos> ObtenerClienteActivosAsync(int id)
+		{
+			var connection = await _dbConnectionBuilder.CreateConnectionAsync();
+
+			if (id <= 0)
+            {
+                throw new Exception("Id incorrecto porfavor intente de nuevo");
+            }
+			
+
+			var sql = @"SELECT * FROM Cliente WHERE cliente_id = @cliente_Id;
+                        SELECT * FROM Cuenta WHERE cliente_id = @cliente_Id;
+                        SELECT * FROM Tarjeta WHERE cliente_id = @cliente_Id;
+                        SELECT * FROM Producto WHERE cliente_id = @cliente_Id;
+                        ";
+
+			using (var multi = await connection.QueryMultipleAsync(sql, new { cliente_Id = id }))
+			{
+				var cliente = multi.ReadSingleOrDefault<ClienteConActivos>();
+				var cuentas = multi.Read<Cuenta>();
+				var tarjetas = multi.Read<Tarjeta>();
+				var productos = multi.Read<Producto>();
+
+				if (cliente != null)
+				{
+					cliente.Cuentas = cuentas.ToList();
+					cliente.Tarjetas = tarjetas.ToList();
+					cliente.Productos = productos.ToList();
+				}
+
+				return cliente;
+			}
+		}
 	}
 }

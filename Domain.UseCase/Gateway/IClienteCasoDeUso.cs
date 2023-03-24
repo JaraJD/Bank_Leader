@@ -16,5 +16,6 @@ namespace Domain.UseCase.Gateway
         Task <List<ClienteConCuenta>> ObtenerClienteTransacciones();
         Task <List<ClienteConTarjeta>> ObtenerClienteTarjeta();
         Task <List<ClienteConProducto>> ObtenerClienteProducto();
+		Task<ClienteConActivos> ObtenerClienteActivos(int id);
 	}
 }
