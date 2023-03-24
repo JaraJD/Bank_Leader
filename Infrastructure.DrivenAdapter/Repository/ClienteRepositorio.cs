@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Ardalis.GuardClauses;
 using Dapper;
@@ -48,42 +49,107 @@ namespace Infrastructure.DrivenAdapter.Repository
             return cliente;
         }
 
-		public Task<Cliente> ObtenerClientePorIdAsync(int id)
+		public async Task<List<Cliente>> TraerTodosLosClientesAsync()
 		{
-			throw new NotImplementedException();
+			var connection = await _dbConnectionBuilder.CreateConnectionAsync();
+			Guard.Against.Null(connection, nameof(connection));
+
+			string query = $"SELECT * FROM {nombreTabla}";
+			var resultado = await connection.QueryAsync<Cliente>(query);
+			Guard.Against.Null(resultado, nameof(resultado));
+
+			connection.Close();
+			return resultado.ToList();
 		}
 
-		public Task<List<ClienteConProducto>> ObtenerClienteProductoAsync()
+		public async Task<Cliente> ObtenerClientePorIdAsync(int idCliente)
 		{
-			throw new NotImplementedException();
+			var connection = await _dbConnectionBuilder.CreateConnectionAsync();
+			string sqlQuery = $"SELECT * FROM {nombreTabla} WHERE cliente_id = @idCliente";
+			var result = await connection.QuerySingleAsync<Cliente>(sqlQuery, new { idCliente });
+			connection.Close();
+			return result;
 		}
 
-		public Task<List<ClienteConTarjeta>> ObtenerClienteTarjetaAsync()
+		public async Task<List<ClienteConProducto>> ObtenerClienteProductoAsync()
 		{
-			throw new NotImplementedException();
+			var connection = await _dbConnectionBuilder.CreateConnectionAsync();
+
+			var sql = $"SELECT * FROM {nombreTabla} C " +
+					  $"INNER JOIN Producto P ON C.cliente_id = P.cliente_id " +
+					  $"INNER JOIN Transaccion T ON P.producto_id = T.producto_id";
+			var cliente = await connection.QueryAsync<ClienteConProducto, ProductoConTransaccion, Transaccion, ClienteConProducto>(sql,
+			(cliente, producto, transaccion) => {
+				if (cliente.Productos == null)
+				{
+					if (producto.Transacciones == null)
+					{
+						producto.Transacciones = new List<Transaccion>();
+					}
+					cliente.Productos = new List<ProductoConTransaccion>();
+				}
+				producto.Transacciones.Add(transaccion);
+				cliente.Productos.Add(producto);
+				return cliente;
+			},
+			splitOn: "id");
+
+			connection.Close();
+			return (List<ClienteConProducto>)cliente;
 		}
 
-		public Task<List<ClienteConCuenta>> ObtenerClienteTransaccionesAsync()
+		public async Task<List<ClienteConTarjeta>> ObtenerClienteTarjetaAsync()
 		{
-			throw new NotImplementedException();
+			var connection = await _dbConnectionBuilder.CreateConnectionAsync();
+
+			var sql = $"SELECT * FROM {nombreTabla} C " +
+					  $"INNER JOIN Tarjeta A ON C.cliente_id = A.cliente_id " +
+					  $"INNER JOIN Transaccion T ON A.tarjeta_id = T.tarjeta_id";
+			var cliente = await connection.QueryAsync<ClienteConTarjeta, TarjetaConTransaccion, Transaccion, ClienteConTarjeta>(sql,
+			(cliente, tarjeta, transaccion) => {
+				if (cliente.Tarjetas == null)
+				{
+					if (tarjeta.Transacciones == null)
+					{
+						tarjeta.Transacciones = new List<Transaccion>();
+					}
+					cliente.Tarjetas = new List<TarjetaConTransaccion>();
+				}
+				tarjeta.Transacciones.Add(transaccion);
+				cliente.Tarjetas.Add(tarjeta);
+				return cliente;
+			},
+			splitOn: "id");
+
+			connection.Close();
+			return (List<ClienteConTarjeta>)cliente;
 		}
 
-		public async Task<List<Cliente>> TraerTodosLosClientes()
-        {
-            var connection = await _dbConnectionBuilder.CreateConnectionAsync();
-            Guard.Against.Null(connection, nameof(connection));
-
-            string query = $"SELECT * FROM {nombreTabla}";
-            var resultado = await connection.QueryAsync<Cliente>(query);
-            Guard.Against.Null(resultado, nameof(resultado));
-
-            connection.Close();
-            return resultado.ToList();
-        }
-
-		public Task<List<Cliente>> TraerTodosLosClientesAsync()
+		public async Task<List<ClienteConCuenta>> ObtenerClienteTransaccionesAsync()
 		{
-			throw new NotImplementedException();
+			var connection = await _dbConnectionBuilder.CreateConnectionAsync();
+
+			var sql = $"SELECT * FROM {nombreTabla} C " +
+					  $"INNER JOIN Cuenta A ON C.cliente_id = A.cliente_id " +
+					  $"INNER JOIN Transaccion T ON A.cuenta_id = T.cuenta_id";
+			var cliente = await connection.QueryAsync<ClienteConCuenta, CuentaConTransaccion, Transaccion, ClienteConCuenta>(sql,
+			(cliente, cuenta, transaccion) => {
+				if (cliente.Cuentas == null)
+				{
+					if (cuenta.Transacciones == null)
+					{
+						cuenta.Transacciones = new List<Transaccion>();
+					}
+					cliente.Cuentas = new List<CuentaConTransaccion>();
+				}
+				cuenta.Transacciones.Add(transaccion);
+				cliente.Cuentas.Add(cuenta);
+				return cliente;
+			},
+			splitOn: "id");
+
+			connection.Close();
+			return (List<ClienteConCuenta>)cliente;
 		}
 	}
 }
