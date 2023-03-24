@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Entities.Entities.Transacciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,6 @@ namespace Domain.Entities.Entities
 		public decimal Monto { get; set; }
 		public decimal Tasa_Interes { get; set; }
 		public string Estado { get; set; }
-		public List<Transaccion> Transacciones { get; set;}
+		public List<TransaccionProducto> Transacciones { get; set;}
 	}
 }

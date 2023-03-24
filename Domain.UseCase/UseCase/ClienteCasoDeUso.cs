@@ -24,14 +24,14 @@ namespace Domain.UseCase.UseCase
             return await clienteRespositorio.InsertarClienteAsync(cliente);
         }
 
-		public Task<Cliente> ObtenerClientePorId(int id)
+		public async Task<Cliente> ObtenerClientePorId(int id)
 		{
-			throw new NotImplementedException();
+			return await clienteRespositorio.ObtenerClientePorIdAsync(id);
 		}
 
-		public Task<List<ClienteConProducto>> ObtenerClienteProducto()
+		public async Task<List<ClienteConProducto>> ObtenerClienteProducto()
 		{
-			throw new NotImplementedException();
+			return await clienteRespositorio.ObtenerClienteProductoAsync();
 		}
 
 		public async Task<List<Cliente>> ObtenerClientes()
@@ -39,14 +39,14 @@ namespace Domain.UseCase.UseCase
             return await clienteRespositorio.TraerTodosLosClientesAsync();
         }
 
-		public Task<List<ClienteConTarjeta>> ObtenerClienteTarjeta()
+		public async Task<List<ClienteConTarjeta>> ObtenerClienteTarjeta()
 		{
-			throw new NotImplementedException();
+			return await clienteRespositorio.ObtenerClienteTarjetaAsync();
 		}
 
-		public Task<List<ClienteConCuenta>> ObtenerClienteTransacciones()
+		public async Task<List<ClienteConCuenta>> ObtenerClienteTransacciones()
 		{
-			throw new NotImplementedException();
+			return await clienteRespositorio.ObtenerClienteTransaccionesAsync();
 		}
 	}
 }

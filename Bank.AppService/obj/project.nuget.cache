@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zyPpVgLhK7phvy6A5ztHBvIIP9wz3fjEqzDC4oPXk4JC56FCrMRZP84XI9B9+nXmNpTnvLu1h0veom6ibOVAIA==",
+  "dgSpecHash": "Lp/75QOFTq7VrSjSt4IJ9YVuGKOhP64lskIF9/Ys8WpjDTBMGxbdd1ne0koKMRuyfQgW7GBXk7n6pNSOweGgFw==",
   "success": true,
   "projectFilePath": "C:\\Users\\57318\\Desktop\\Liga Sofka\\DDD-BD-Dapper-PruebasUnitarias\\Semana8\\Bank_Leader\\Bank.AppService\\Bank.AppService.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\57318\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\57318\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\57318\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\57318\\.nuget\\packages\\dapper.sqlbuilder\\2.0.78\\dapper.sqlbuilder.2.0.78.nupkg.sha512",
     "C:\\Users\\57318\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512",
     "C:\\Users\\57318\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\57318\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
