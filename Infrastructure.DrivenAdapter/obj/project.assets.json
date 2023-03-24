@@ -104,6 +104,18 @@
           }
         }
       },
+      "Dapper.SqlBuilder/2.0.78": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "2.0.78"
+        },
+        "compile": {
+          "lib/net5.0/Dapper.SqlBuilder.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.SqlBuilder.dll": {}
+        }
+      },
       "JetBrains.Annotations/2021.3.0": {
         "type": "package",
         "compile": {
@@ -968,6 +980,20 @@
         "lib/net5.0/Dapper.xml",
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "Dapper.SqlBuilder/2.0.78": {
+      "sha512": "07LHm+/YOLyFieN51mjwrrVPKX3q0k7RxG+8zi/5MKjy7mWid/DRlRFNgvcCffEcjLjkbgEdITHkKTKSxSmPnw==",
+      "type": "package",
+      "path": "dapper.sqlbuilder/2.0.78",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dapper.sqlbuilder.2.0.78.nupkg.sha512",
+        "dapper.sqlbuilder.nuspec",
+        "lib/net461/Dapper.SqlBuilder.dll",
+        "lib/net5.0/Dapper.SqlBuilder.dll",
+        "lib/netstandard2.0/Dapper.SqlBuilder.dll"
       ]
     },
     "JetBrains.Annotations/2021.3.0": {
@@ -2324,29 +2350,30 @@
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "Dapper >= 2.0.123",
+      "Dapper.SqlBuilder >= 2.0.78",
       "Domain.Entities >= 1.0.0",
       "Domain.UseCase >= 1.0.0",
       "Microsoft.Data.SqlClient >= 5.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jesus\\.nuget\\packages\\": {},
+    "C:\\Users\\juans\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
+      "projectUniqueName": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
       "projectName": "Infrastructure.DrivenAdapter",
-      "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
-      "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Infrastructure.DrivenAdapter\\obj\\",
+      "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\Infrastructure.DrivenAdapter.csproj",
+      "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Infrastructure.DrivenAdapter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2362,11 +2389,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
-              "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
+            "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj": {
+              "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.Entities\\Domain.Entities.csproj"
             },
-            "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
-              "projectPath": "C:\\Users\\jesus\\source\\repos\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
+            "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj": {
+              "projectPath": "C:\\Users\\juans\\Desktop\\Programacion\\C# .NET\\Dapper\\EjercicioBank\\Bank_Leader\\Domain.UseCase\\Domain.UseCase.csproj"
             }
           }
         }
@@ -2396,6 +2423,10 @@
           "Dapper": {
             "target": "Package",
             "version": "[2.0.123, )"
+          },
+          "Dapper.SqlBuilder": {
+            "target": "Package",
+            "version": "[2.0.78, )"
           },
           "Microsoft.Data.SqlClient": {
             "target": "Package",
