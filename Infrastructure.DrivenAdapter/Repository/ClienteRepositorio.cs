@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml;
 using Ardalis.GuardClauses;
 using Dapper;
 using Domain.Entities.Commands;
@@ -13,7 +14,7 @@ using Infrastructure.DrivenAdapter.Gateway;
 
 namespace Infrastructure.DrivenAdapter.Repository
 {
-    public class ClienteRepositorio : IClienteRepositorio
+    public class ClienteRepositorio : IClienteRepositorio 
     {
         private readonly IDbConnectionBuilder _dbConnectionBuilder;
         private readonly string nombreTabla = "Cliente";
@@ -133,7 +134,8 @@ namespace Infrastructure.DrivenAdapter.Repository
 					  $"INNER JOIN Cuenta A ON C.cliente_id = A.cliente_id " +
 					  $"INNER JOIN Transaccion T ON A.cuenta_id = T.cuenta_id";
 			var cliente = await connection.QueryAsync<ClienteConCuenta, CuentaConTransaccion, Transaccion, ClienteConCuenta>(sql,
-			(cliente, cuenta, transaccion) => {
+			(cliente, cuenta, transaccion) =>
+			{
 				if (cliente.Cuentas == null)
 				{
 					if (cuenta.Transacciones == null)
@@ -146,7 +148,7 @@ namespace Infrastructure.DrivenAdapter.Repository
 				cliente.Cuentas.Add(cuenta);
 				return cliente;
 			},
-			splitOn: "cuenta_id");
+			splitOn: "cliente_id, transaccion_id");
 
 			connection.Close();
 			return (List<ClienteConCuenta>)cliente;
