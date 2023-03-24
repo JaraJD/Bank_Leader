@@ -24,9 +24,29 @@ namespace Domain.UseCase.UseCase
             return await clienteRespositorio.InsertarClienteAsync(cliente);
         }
 
-        public async Task<List<Cliente>> ObtenerClientes()
+		public async Task<Cliente> ObtenerClientePorId(int id)
+		{
+			return await clienteRespositorio.ObtenerClientePorIdAsync(id);
+		}
+
+		public async Task<List<ClienteConProducto>> ObtenerClienteProducto()
+		{
+			return await clienteRespositorio.ObtenerClienteProductoAsync();
+		}
+
+		public async Task<List<Cliente>> ObtenerClientes()
         {
-            return await clienteRespositorio.TraerTodosLosClientes();
+            return await clienteRespositorio.TraerTodosLosClientesAsync();
         }
-    }
+
+		public async Task<List<ClienteConTarjeta>> ObtenerClienteTarjeta()
+		{
+			return await clienteRespositorio.ObtenerClienteTarjetaAsync();
+		}
+
+		public async Task<List<ClienteConCuenta>> ObtenerClienteTransacciones()
+		{
+			return await clienteRespositorio.ObtenerClienteTransaccionesAsync();
+		}
+	}
 }
